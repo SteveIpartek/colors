@@ -1,3 +1,10 @@
+/* Estilos generales y fondo oscuro */
+body {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,46 +12,108 @@
   text-align: center;
 }
 
-/* CSS de regalo */
-
-.container {
-  width: 660px;
-  display: flex;
-  padding: 20px;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid white;
+h1 {
+  color: #f5f5f5;
 }
 
-/* Estilos para cada una de las box */
+/* Estilos para el input de texto */
+input {
+  width: 50%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  outline: none; /* Quita el borde al hacer foco */
+  color: #333;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Contenedor para la rejilla de cajas */
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  max-width: 680px; /* Ajusta el ancho máximo del contenedor */
+  margin: 0 auto;
+}
+
+/* Estilo base para cada caja */
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px;
   height: 200px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  color: white;
+  background-color: transparent; /* Fondo transparente */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilos para el input */
-input {
-  width: 50%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
+p {
+  margin: 5px;
 }
 
+/* --- Colores específicos para cada caja --- */
+/* Esto funciona gracias a className={`box ${color}`} en tu componente React */
 
+.box.red {
+  border-color: red;
+  color: red;
+}
+
+.box.green {
+  border-color: green;
+  color: green;
+}
+
+.box.pink {
+  border-color: pink;
+  color: pink;
+}
+
+.box.yellow {
+  border-color: yellow;
+  color: yellow;
+}
+
+.box.purple {
+  border-color: purple;
+  color: purple;
+}
+
+.box.white {
+  /* Hacemos el blanco un poco visible sobre el fondo */
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.box.blue {
+  border-color: blue;
+  color: blue;
+}
+
+.box.aqua {
+  border-color: aqua;
+  color: aqua;
+}
+
+.box.olive {
+  border-color: olive;
+  color: olive;
+}
 
 
 
